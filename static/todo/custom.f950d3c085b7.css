@@ -1,0 +1,21 @@
+#forfont {
+    font-family: 'Pangolin', cursive;
+    font-size:1.2rem;
+    padding: 5px;
+    text-align:center;
+}
+
+#credit {
+    font-size:0.8rem;
+    color:orchid;
+}
+
+a {
+    color: hotpink;
+  }
+
+a:hover {
+    text-decoration:none;
+}
+
+

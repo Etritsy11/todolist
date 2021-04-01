@@ -1,0 +1,36 @@
+
+{% extends "todo/base.html" %}
+
+
+{% block content %}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div class="row justify-content-center mt-5">
+  <div class="col-md-7 text-center">
+    <h1>Anything you plan on doing, add it to the list!</h1>
+    <p>
+      <h6>Having problems with your memory or just don't wanna bother keeping these
+        quotidian plans in mind? Simply save them here! Completely confidential.</h6>
+    </p>
+    {% if user.is_authenticated == False %}
+    <a role="button" class="btn btn-danger btn-lg m-2" href="{% url 'signupuser' %}">Start</a> {% endif %} 
+    {% if user.is_authenticated%}
+    <a
+      role="button"
+      class="btn btn-danger btn-lg m-2"
+      href="{% url 'createtodo' %}"
+      >Start</a
+    > {% endif %}<br><br><br><br><br><br><br>{% load static %}
+    <link rel="stylesheet" href="{% static 'todo/custom.css' %}" />
+    <h6>App made by Etrit.S for practice purposes </h6> 
+    <div id="credit"><i>Icon made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></i></div>
+  </div>
+
+</div>
+
+{% endblock %}
